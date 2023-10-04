@@ -36,7 +36,7 @@ Your template file should resemble a standard JSON but with placeholders for the
 - **Placeholders** are denoted using a dollar sign `$` followed by the key name (e.g., `$name`, `$height`).
 
 **Example:**
-\```
+```
 {
   "name": $name,
   "height": $height,
@@ -44,24 +44,24 @@ Your template file should resemble a standard JSON but with placeholders for the
     "age": $age
   }
 }
-\```
+```
 
 ### Config File
 
 The config file is a standard JSON file containing the actual values for the placeholders defined in the template file.
 
 **Example:**
-\```
+```
 {
   "name": "John Doe",
   "height": 180,
   "age": 30
 }
-\```
+```
 
 When the action runs with the above files, it will produce an output like:
 
-\```
+```
 {
   "name": "John Doe",
   "height": 180,
@@ -69,4 +69,4 @@ When the action runs with the above files, it will produce an output like:
     "age": 30
   }
 }
-\```
+```
