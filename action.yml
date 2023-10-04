@@ -1,0 +1,15 @@
+name: 'JSON Template Populator'
+description: 'Populate JSON templates with variables'
+inputs:
+  config-file:
+    description: 'Path to the configuration file'
+    required: true
+  template-file:
+    description: 'Path to the JSON template file'
+    required: true
+  output-file:
+    description: 'Path where the populated JSON file should be saved'
+    required: true
+runs:
+  using: 'node18'
+  main: 'src/main.js'

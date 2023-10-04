@@ -1,0 +1,12 @@
+{
+  "name": "json-template-populator",
+  "version": "0.1.0",
+  "description": "A GitHub Action to populate JSON templates",
+  "main": "src/main.js",
+  "scripts": {
+    "build": "node src/main.js"
+  },
+  "dependencies": {
+    "@actions/core": "^1.0.0"
+  }
+}
