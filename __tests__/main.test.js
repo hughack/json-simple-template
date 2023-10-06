@@ -99,4 +99,35 @@ describe('JSON Template Populator', () => {
     expect(fs.writeFileSync).toHaveBeenCalledWith(outputFile, JSON.stringify(JSON.parse(expectedOutput), null, 2));
     expect(result).toEqual(JSON.parse(expectedOutput));
   });
+
+  it('should replace placeholders within backtick strings', () => {
+    const mockTemplate = "" +
+    '{\n' +
+      '"name": `${name}`,\n' +
+      '"height": $height,\n' +
+      '"doubleWhammy": `${name} is ${height}cm tall`\n' +
+    '}';
+    const mockConfig = `{
+      "name": "John",
+      "height": 180
+    }`;
+    const expectedOutput = `{
+      "name": "John",
+      "height": 180,
+      "doubleWhammy": "John is 180cm tall"
+    }`;
+
+    fs.readFileSync.mockImplementationOnce(() => mockConfig)
+                   .mockImplementationOnce(() => mockTemplate);
+    fs.writeFileSync.mockImplementation(() => {});
+
+    const configFile = 'path/to/mockConfig.json';
+    const templateFile = 'path/to/mockTemplate.txt';
+    const outputFile = 'path/to/mockOutput.json';
+    
+    const result = populateTemplate(configFile, templateFile, outputFile);
+
+    expect(fs.writeFileSync).toHaveBeenCalledWith(outputFile, JSON.stringify(JSON.parse(expectedOutput), null, 2));
+    expect(result).toEqual(JSON.parse(expectedOutput));
+  });
 });
