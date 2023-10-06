@@ -1,0 +1,8 @@
+{
+  "aString": "test string",
+  "aNumber": 12.3,
+  "aBoolean": false,
+  "anArray": [1, "string", true, null],
+  "anObject": {"hello": "world"},
+  "aNull": null
+}

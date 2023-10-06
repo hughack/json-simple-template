@@ -1,0 +1,16 @@
+{
+  "aString": $aString,
+  "aNumber": $aNumber,
+  "aBoolean": $aBoolean,
+  "anArray": $anArray,
+  "anObject": $anObject,
+  "aNull": $aNull
+  "nested": {
+    "aString": $aString,
+    "aNumber": $aNumber,
+    "aBoolean": $aBoolean,
+    "anArray": $anArray,
+    "anObject": $anObject,
+    "aNull": $aNull
+  }
+}
