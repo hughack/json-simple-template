@@ -17,7 +17,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Use JSON Config Injector
-      uses: hughack/json-simple-template@main
+      uses: hughack/json-simple-template@v0.1.1
       with:
         config-file: 'path/to/config.json'
         template-file: 'path/to/template.json'
