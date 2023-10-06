@@ -1,5 +1,8 @@
 name: 'JSON Template Populator'
 description: 'Populate JSON templates with variables'
+branding:
+  color: 'blue'
+  icon: 'file-text'
 inputs:
   config-file:
     description: 'Path to the configuration file'
