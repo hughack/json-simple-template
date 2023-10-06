@@ -4,7 +4,7 @@
   "aBoolean": $aBoolean,
   "anArray": $anArray,
   "anObject": $anObject,
-  "aNull": $aNull
+  "aNull": $aNull,
   "nested": {
     "aString": $aString,
     "aNumber": $aNumber,
