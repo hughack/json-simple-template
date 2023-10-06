@@ -17,3 +17,13 @@ jobs:
         node-version: '20'
     - run: npm install
     - run: npm test
+
+    - name: Use JSON Config Injector
+      uses: hughack/json-simple-template@v0.1.0
+      with:
+        config-file: '__tests__/config.json'
+        template-file: '__tests__/template.json'
+        output-file: '__tests__/output.json'
+    
+    - name: Print output.json
+      run: cat __tests__/output.json
